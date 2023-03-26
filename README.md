@@ -1,3 +1,3 @@
 # leetCode
 
-##Utility repository where I store my leetcode exercises
+## Utility repository where I store my leetcode exercises
