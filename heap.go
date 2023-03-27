@@ -5,7 +5,6 @@ type Heap struct {
 
 func (heap *Heap) HeapSort(array []int) {
 	heap.BuildHeap(array)
-
 	for length := len(array); length > 1; length-- {
 		heap.RemoveTop(array, length)
 	}

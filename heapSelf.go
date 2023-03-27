@@ -3,15 +3,15 @@ package main
 type HeapMy struct {
 }
 
-func (h *HeapMy) CreateHeap(arr []int) {
-	for i := len(arr) / 2; i >= 0; i-- {
-		h.Heapify2(arr, i, len(arr))
-	}
-}
 func (h *HeapMy) Sort(arr []int) {
 	h.CreateHeap(arr)
 	for i := len(arr); i > 1; i-- {
 		h.SwapBotton(arr, i)
+	}
+}
+func (h *HeapMy) CreateHeap(arr []int) {
+	for i := len(arr) / 2; i >= 0; i-- {
+		h.Heapify2(arr, i, len(arr))
 	}
 }
 func (h *HeapMy) SwapBotton(arr []int, length int) {
@@ -21,7 +21,7 @@ func (h *HeapMy) SwapBotton(arr []int, length int) {
 
 func (h *HeapMy) Heapify2(arr []int, root, length int) {
 	var max = root
-	l, r := h.left(root), h.right(root)
+	var l, r = h.left(root), h.right(root)
 	if l < length && arr[max] < arr[l] {
 		max = l
 	}
@@ -38,5 +38,5 @@ func (*HeapMy) left(parent int) int {
 	return (parent * 2) + 1
 }
 func (*HeapMy) right(parent int) int {
-	return (parent * 2) + 1
+	return (parent * 2) + 2
 }
