@@ -3,15 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	array := []int{11, 15, 14, 7, 4, 9, 21}
+	//array := []int{11, 15, 14, 7, 4, 9, 21}
 	//BubbleSort(array)
 	//MergeSort(array)
+	//var heap = new(Heap)
+	//heap.HeapSort(array)
 	//fmt.Println(array)
-	inputArray := []int{11, 15, 14, 7, 4, 9, 21}
-	var heap2 = new(HeapMy)
-	heap2.Sort(array)
-	fmt.Println(array)
-	var heap = new(Heap)
-	heap.HeapSort(inputArray)
-	fmt.Println(inputArray)
+	//arr, row, val := CreateRandomArr(4, 4, 1000)
+	//fmt.Printf("The array %v has maximum value in line %v and it equals %v", arr, row+1, val)
+	fmt.Println(RomanToInt("MDCCCXXXIV"))
 }
